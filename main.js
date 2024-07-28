@@ -8,6 +8,7 @@ const TodoList = ({todo,handleToggle,handleDelete})=>{
                 backgroundColor:el.status?'lightgreen':'yellow', 
                 padding:'3px', 
                 margin: '4px'}}>
+                    <h1>{el.id}</h1>
                 <h4>
                 {el.title}
                 </h4>
@@ -55,13 +56,13 @@ const Todo = ()=>{
     }
 
     
-    return( <div>
-        <h1>TODO</h1>
-        <input type='text'
-         placeholder='Enter TODO' 
-         value={text}
-         onChange={handleChange} 
-        />
+        return( <div>
+            <h1>TODO</h1>
+            <input type='text'
+            placeholder='Enter TODO' 
+            value={text}
+            onChange={handleChange} 
+            />
         <button onClick={handleClick}>Add</button>
         <div>
             <TodoList todo={todo} handleToggle={handleToggle} handleDelete={handleDelete}/>
